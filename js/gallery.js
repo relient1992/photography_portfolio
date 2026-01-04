@@ -10,7 +10,7 @@ const imageMap = {
   food: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
   events: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
   pets: ["1.jpg", "2.jpg"],
-  realestate: ["1.jpg", "2.jpg", "3.jpg"]
+  realestate: ["1.jpg", "2.jpg", "3.jpg",  "4.jpg"]
 };
 
 function loadImages() {
