@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h1 class="logo"></h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="gallery-controls">
+  <span class="control-label"></span>
+
+  <button class="control-btn active" onclick="setColumns(2, this)">
+    2 Columns
+  </button>
+
+  <button class="control-btn" onclick="setColumns(3, this)">
+    3 Columns
+  </button>
+</section>
+
+<section class="gallery-grid" id="gallery"></section>
+
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="Expanded view">
+</div>
+
+<script src="js/gallery.js"></script>
+</body>
+</html>
