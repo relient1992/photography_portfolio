@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>R-AMS | Proposal Defense Infographic</title>
+
+<style>
+:root{
+  --primary:#1e3a8a;
+  --secondary:#2563eb;
+  --accent:#22c55e;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  padding:4rem 1.5rem;
+  text-align:center;
+}
+
+header h1{
+  font-size:2.6rem;
+  margin-bottom:.5rem;
+}
+
+header p{
+  max-width:900px;
+  margin:auto;
+  font-size:1.05rem;
+  opacity:.95;
+}
+
+.section{
+  padding:4rem 1.5rem;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  font-size:2rem;
+  color:var(--primary);
+  margin-bottom:2rem;
+  text-align:center;
+}
+
+.grid{
+  display:grid;
+  gap:1.5rem;
+}
+
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+.card{
+  background:var(--card);
+  padding:1.5rem;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.card h3{
+  margin-top:0;
+  color:var(--secondary);
+}
+
+.badge{
+  display:inline-block;
+  background:#e0e7ff;
+  color:#1e40af;
+  padding:.25rem .6rem;
+  border-radius:999px;
+  font-size:.75rem;
+  margin-bottom:.5rem;
+}
+
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  justify-content:center;
+}
+
+.flow div{
+  background:#eff6ff;
+  border:1px dashed #93c5fd;
+  padding:1rem 1.3rem;
+  border-radius:12px;
+  font-weight:600;
+}
+
+.kpi{
+  font-size:2.2rem;
+  font-weight:700;
+  color:var(--secondary);
+}
+
+footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:2rem 1.5rem;
+  text-align:center;
+  font-size:.9rem;
+}
+
+/* SYSTEM INTERFACE MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:2rem;
+}
+
+.modal.active{display:flex}
+
+.modal-content{
+  background:#fff;
+  max-width:1200px;
+  width:100%;
+  max-height:90vh;
+  overflow:auto;
+  border-radius:16px;
+  padding:1.5rem;
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:1rem;
+}
+
+.modal-header h3{
+  margin:0;
+  color:var(--primary);
+}
+
+.close-btn{
+  cursor:pointer;
+  font-size:1.5rem;
+  font-weight:bold;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.2rem;
+}
+
+.gallery figure{
+  margin:0;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.gallery img:hover{
+  transform:scale(1.03);
+  box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+
+.gallery figcaption{
+  font-size:.85rem;
+  color:var(--muted);
+  margin-top:.4rem;
+  text-align:center;
+}
+
+/* IMAGE ZOOM OVERLAY */
+.zoom-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:10000;
+  cursor:zoom-out;
+}
+
+.zoom-modal.active{display:flex}
+
+.zoom-modal img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:12px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+  animation:zoomIn .25s ease;
+}
+
+@keyframes zoomIn{
+  from{transform:scale(.85);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Recruitment & Applicant Management System (R-AMS)</h1>
+  <p>
+    A Two-Tier, Secure, Web-Based Recruitment System for XBP Global Company  
+    <br/>Proposal Defense Infographic Presentation
+  </p>
+</header>
+
+<!-- BACKGROUND -->
+<section class="section">
+  <h2 class="section-title">📌 Background of the Study</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Current Situation</h3>
+      <p>
+        HR recruitment relied on spreadsheets, paper forms, and manual email tracking.
+        This caused data duplication, delays, and reporting difficulties.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Key Problems</h3>
+      <ul>
+        <li>No centralized applicant database</li>
+        <li>Slow screening & tracking</li>
+        <li>Limited analytics & reporting</li>
+        <li>High risk of data inconsistency</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Need for Digital HR</h3>
+      <p>
+        Digital HR systems improve efficiency, accuracy, accountability, and
+        decision-making through automation and analytics.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIVES -->
+<section class="section">
+  <h2 class="section-title">🎯 Objectives of the Study</h2>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>General Objective</h3>
+      <p>
+        Design and develop a secure, database-driven, web-based Recruitment
+        and Applicant Management System with role-based access.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Specific Objectives</h3>
+      <ul>
+        <li>Applicant Web Form (Tier-1)</li>
+        <li>Secure Login & RBAC</li>
+        <li>HR Dashboard with CRUD</li>
+        <li>Bulk CSV Upload</li>
+        <li>Analytics & Reports</li>
+        <li>System Logs & Security</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM OVERVIEW -->
+<section class="section">
+  <h2 class="section-title">🧩 System Overview (Two-Tier Design)</h2>
+  <div class="flow">
+    <div>Tier 1<br/>Applicant Web Form</div>
+    <div>Validation & Pre-Screening</div>
+    <div>Centralized Database</div>
+    <div>Tier 2<br/>HR Management System</div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <h2 class="section-title">⚙️ Core System Features</h2>
+  <div class="grid grid-4">
+    <div class="card">
+      <span class="badge">Tier-1</span>
+      <h3>Applicant Web Form</h3>
+      <p>Structured data capture with validation and automatic pre-screening.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Security</span>
+      <h3>Role-Based Access Control</h3>
+      <p>Admin, HR Manager, Recruiter access with session-based security.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Management</span>
+      <h3>Applicant CRUD</h3>
+      <p>Create, update, archive, restore applicant records efficiently.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Efficiency</span>
+      <h3>Bulk Upload (CSV)</h3>
+      <p>Mass applicant upload using CSV validation (PapaParse).</p>
+    </div>
+    <div class="card">
+      <span class="badge">Analytics</span>
+      <h3>Recruitment Dashboard</h3>
+      <p>Visual KPIs, trends, recruiter performance using Chart.js.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Monitoring</span>
+      <h3>System Logs</h3>
+      <p>Tracks logins, CRUD actions, uploads for accountability.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Reporting</span>
+      <h3>Data Extraction</h3>
+      <p>Export filtered recruitment data to CSV.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Security</span>
+      <h3>Data Protection</h3>
+      <p>Password hashing, SQL injection protection, intranet-only access.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section class="section">
+  <h2 class="section-title">🛠 Technologies Used</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, TailwindCSS, JavaScript, Chart.js, Litepicker</p>
+    </div>
+    <div class="card">
+      <h3>Backend</h3>
+      <p>PHP, MySQL, REST APIs, Secure Sessions</p>
+    </div>
+    <div class="card">
+      <h3>Environment</h3>
+      <p>Company Intranet, Local Xeon Server</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">🖥 System Interface</h2>
+
+  <div class="grid grid-1" style="text-align:center">
+    <div class="card">
+      <h3>R-AMS User Interface Screenshots</h3>
+      <p>
+        Click below to view the actual system interfaces used in the
+        Recruitment and Applicant Management System (Figures 9–22).
+      </p>
+      <br/>
+      <button onclick="openModal()" style="
+        background:var(--secondary);
+        color:#fff;
+        border:none;
+        padding:.9rem 1.6rem;
+        border-radius:10px;
+        font-size:1rem;
+        cursor:pointer;">
+        View System Interface
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- IPO -->
+<section class="section">
+  <h2 class="section-title">🔄 Conceptual Framework (IPO)</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Input</h3>
+      <p>Applicant data, CSV files, HR credentials, logs</p>
+    </div>
+    <div class="card">
+      <h3>Process</h3>
+      <p>RBAC, CRUD, pre-screening, analytics, logging, security</p>
+    </div>
+    <div class="card">
+      <h3>Output</h3>
+      <p>Centralized data, efficient workflow, real-time insights</p>
+    </div>
+  </div>
+</section>
+
+<!-- ISO -->
+<section class="section">
+  <h2 class="section-title">📊 ISO/IEC 25010 Software Quality Evaluation</h2>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>Functional Suitability</h3>
+      <p>
+        Evaluates whether the system provides all required recruitment
+        functionalities accurately and appropriately.
+      </p>
+      <ul>
+        <li>Applicant Web Form & Pre-screening</li>
+        <li>CRUD operations for applicants</li>
+        <li>Bulk CSV upload and validation</li>
+        <li>Analytics dashboard and logs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Performance Efficiency</h3>
+      <p>
+        Measures system responsiveness, processing speed, and handling of
+        large datasets.
+      </p>
+      <ul>
+        <li>Fast dashboard rendering</li>
+        <li>Optimized MySQL queries</li>
+        <li>Efficient bulk upload processing</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Usability (Interaction Capability)</h3>
+      <p>
+        Assesses ease of use, learnability, and user satisfaction.
+      </p>
+      <ul>
+        <li>Clear navigation structure</li>
+        <li>Form validation and error prompts</li>
+        <li>HR-friendly dashboard layout</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Reliability</h3>
+      <p>
+        Determines system stability, fault tolerance, and data consistency.
+      </p>
+      <ul>
+        <li>Input validation mechanisms</li>
+        <li>Error handling during uploads</li>
+        <li>System logs for traceability</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Security</h3>
+      <p>
+        Evaluates protection of sensitive data and access control.
+      </p>
+      <ul>
+        <li>Role-Based Access Control (RBAC)</li>
+        <li>Password hashing and secure sessions</li>
+        <li>SQL injection prevention</li>
+        <li>Intranet-only deployment</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Compatibility</h3>
+      <p>
+        Ensures the system works reliably across supported environments.
+      </p>
+      <ul>
+        <li>Chrome, Edge, Firefox compatibility</li>
+        <li>Co-existence within company intranet</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Maintainability</h3>
+      <p>
+        Assesses ease of modification, debugging, and enhancement.
+      </p>
+      <ul>
+        <li>Modular backend APIs</li>
+        <li>Reusable frontend components</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Portability & Scalability</h3>
+      <p>
+        Evaluates adaptability to increased users and data volume.
+      </p>
+      <ul>
+        <li>Scalable database structure</li>
+        <li>Expandable recruitment modules</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNIFICANCE -->
+<section class="section">
+  <h2 class="section-title">🌟 Significance of the Study</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>HR Department</h3>
+      <p>Faster processing, centralized data, analytics-driven decisions.</p>
+    </div>
+    <div class="card">
+      <h3>Management</h3>
+      <p>Improved monitoring, transparency, and digital transformation.</p>
+    </div>
+    <div class="card">
+      <h3>Future Researchers</h3>
+      <p>Reference model for secure HRIS and web-based recruitment systems.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>Daryl T. Roallos</strong><br/>
+  BS Information Systems · Proposal Defense · R-AMS
+</footer>
+
+<div class="modal" id="systemModal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+
+    <div class="modal-header">
+      <h3>R-AMS System Interface (Figures 9–22)</h3>
+      <span class="close-btn" onclick="closeModal()">×</span>
+    </div>
+
+    <div class="gallery">
+
+      <figure>
+        <img src="Figures 9-22 images/fig9-login.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 9 – R-AMS Login Interface</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig10-applicant-form.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 10 – Tier-1 Applicant Web Form</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig11-dashboard-active.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 11 – HR Dashboard (Active Recruitment)</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig12-archived.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 12 – Archived Applicants</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig13-table-values.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 13 – Recruitment Table Values</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig14-search-dropdown.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 14 – Search & Filter Options</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig15-kpi-cards.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 15 – Recruiter KPI Cards</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig16-column-selection.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 16 – Column Selection</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig17-logs.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 17 – System Activity Logs</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig18-bulk-upload.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 18 – Bulk Upload Module</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig19-add-applicant.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 19 – Add Single Applicant</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig20-analytics-efficiency.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 20 – Analytics: Resource Efficiency</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig21-deployment-trend.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 21 – Analytics: Deployment Trend</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Figures 9-22 images/fig22-applicant-trend.png" onclick="zoomImage(this.src)">
+        <figcaption>Figure 22 – Analytics: Applicant Trend</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</div>
+
+<div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
+  <img id="zoomImg" src="" alt="Zoomed Image">
+</div>
+
+
+<script>
+function openModal(){
+  document.getElementById('systemModal').classList.add('active');
+}
+
+function closeModal(){
+  document.getElementById('systemModal').classList.remove('active');
+}
+</script>
+
+<script>
+function zoomImage(src){
+  const modal = document.getElementById('zoomModal');
+  const img = document.getElementById('zoomImg');
+  img.src = src;
+  modal.classList.add('active');
+}
+
+function closeZoom(){
+  document.getElementById('zoomModal').classList.remove('active');
+}
+
+/* ESC key support */
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){
+    closeZoom();
+    closeModal();
+  }
+});
+</script>
+
+</body>
+</html>
